@@ -1,0 +1,135 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F3F3;
+    margin: 0;
+    padding: 0;
+}
+.container{
+   
+margin: 0 auto;
+background-color: white;
+}
+.header{
+    background-color: #F3F3F3;
+text-align: center;
+font-size: 38px;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.9px;
+display: flex;
+justify-content: center;
+padding: 20px;
+}
+.sides{
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.side{
+height: 73px;
+display: flex;
+justify-content: center;
+flex-shrink: 0;
+}
+.side-1-item{
+    color: (Black, #323232);
+text-align: center;
+font-size: 32px;
+font-weight: 600;
+letter-spacing: 1.6px;
+}
+.side-2-item{
+    color: #969696;
+text-align: center;
+font-size: 32px;
+font-weight: 600;
+letter-spacing: 1.6px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-text{
+   
+height: 78px;
+margin: 40px 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+.inp-text{
+    width: 900px;
+    height: 78px;
+    background-color: #F1ECE6;
+    color: #969696;
+font-size: 32px;
+font-weight: 400;
+border-top-left-radius: 50px;
+border-bottom-left-radius: 50px;
+}
+.input-button{
+    width: 140px;
+height: 84px;
+padding: 10px;
+gap: 10px;
+flex-shrink: 0;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+color: #F3F3F3;
+text-align: center;
+font-size: 38px;
+font-weight: 600;
+letter-spacing: 1.9px;
+background-color: #76B7CD;
+    }
+ul li{
+    list-style:none;
+    font-size: 32px;
+    padding: 20px 70px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #F3F3F3;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    border-radius:50%;
+    background-image: url(./Radio\ button\ unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    right: 100%;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(./Check\ circle\ outline.svg);
+    background-size:cover;
+    background-position: absolute;
+    top: 12px;
+    right: 100%;
+}
+ul li span{
+    position: absolute;
+    left: 100%;;
+    font-size: 75px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #ff0000;
+    color: white;
+}
