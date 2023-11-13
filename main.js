@@ -5,7 +5,6 @@ let Data = new Date();
 let Hour = Data.getHours();
 Minutes = Data.getMinutes();
 Seconds = Data.getSeconds();
-// + Hour + ":" + Minutes + ":" + Seconds);
 
 
 function addTask(){ 
@@ -23,15 +22,22 @@ function addTask(){
        li.appendChild(p)
     } 
     inpText.value = '';
+    saveData();
 }
 checkBoxes.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
-        e.target.classList.toggle("checked")
+        e.target.classList.toggle("checked");
+        saveData();
     } else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
+        saveData()
     }
 }, false);
 
-console.log(Data);
-
-    
+function saveData(){
+    localStorage.setItem("data",checkBoxes.innerHTML);
+}
+function showTask(){
+    checkBoxes.innerHTML = localStorage.getItem("data");
+}
+showTask();
